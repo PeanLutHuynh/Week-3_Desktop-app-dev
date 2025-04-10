@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            txtResult = new TextBox();
             btn7 = new Button();
             btn8 = new Button();
             btn9 = new Button();
@@ -49,14 +49,15 @@
             btnEqual = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // txtResult
             // 
-            textBox1.BackColor = SystemColors.ButtonHighlight;
-            textBox1.Location = new Point(45, 78);
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(443, 27);
-            textBox1.TabIndex = 0;
+            txtResult.BackColor = SystemColors.ButtonHighlight;
+            txtResult.Location = new Point(45, 78);
+            txtResult.Name = "txtResult";
+            txtResult.ReadOnly = true;
+            txtResult.RightToLeft = RightToLeft.Yes;
+            txtResult.Size = new Size(443, 27);
+            txtResult.TabIndex = 0;
             // 
             // btn7
             // 
@@ -243,7 +244,7 @@
             Controls.Add(btn9);
             Controls.Add(btn8);
             Controls.Add(btn7);
-            Controls.Add(textBox1);
+            Controls.Add(txtResult);
             MaximizeBox = false;
             Name = "frmCaculator";
             Text = "Form1";
@@ -253,7 +254,7 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox txtResult;
         private Button btn7;
         private Button btn8;
         private Button btn9;
