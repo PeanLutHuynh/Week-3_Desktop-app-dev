@@ -47,9 +47,44 @@
             txtResult1.Clear();
         }
 
-        private void txtA_Enter(object sender, EventArgs e)
+        private void txtA_KeyPress(object sender, KeyPressEventArgs e)
         {
-            this.txtB.Focus();
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                txtB.Focus();
+            }
         }
+
+        private void txtB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                txtC.Focus();
+            }
+        }
+
+        private void txtC_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnSolve.Focus();
+            }
+        }
+
     }
 }

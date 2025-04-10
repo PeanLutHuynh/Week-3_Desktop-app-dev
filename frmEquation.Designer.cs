@@ -84,7 +84,7 @@
             txtA.Name = "txtA";
             txtA.Size = new Size(316, 27);
             txtA.TabIndex = 4;
-            txtA.Enter += txtA_Enter;
+            txtA.KeyPress += txtA_KeyPress;
             // 
             // txtB
             // 
@@ -92,6 +92,7 @@
             txtB.Name = "txtB";
             txtB.Size = new Size(316, 27);
             txtB.TabIndex = 5;
+            txtB.KeyPress += txtB_KeyPress;
             // 
             // txtC
             // 
@@ -99,6 +100,7 @@
             txtC.Name = "txtC";
             txtC.Size = new Size(316, 27);
             txtC.TabIndex = 6;
+            txtC.KeyPress += txtC_KeyPress;
             // 
             // lblResult1
             // 
